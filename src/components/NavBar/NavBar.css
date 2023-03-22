@@ -1,6 +1,6 @@
 .Navigation {
 	display: flex;
-	background: #000;
+	background: rgba(164, 2, 143, 0.662);
 	min-height: 10vh;
 	width: 100%;
   }

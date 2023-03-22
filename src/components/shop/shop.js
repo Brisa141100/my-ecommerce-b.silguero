@@ -4,8 +4,8 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 const Shop = () => {
     return (
         <div style= {{display:"flex"}}>
-            <AddShoppingCartIcon sx= {{color: "white"}} />
-            <span style={{ color: "white"}}>0</span>
+            <AddShoppingCartIcon sx= {{color: "black"}} />
+            <span style={{ color: "black"}}>0</span>
         </div>
     );
 };
