@@ -1,15 +1,18 @@
 import React from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 
-const Header = (props) => {
-  // console.log(props);
+const Header = () => {
   return (
-    <div className="Header">
-      
-      <h1>{props.title}</h1>
-      <h2>{props.subTitle}</h2>
-    </div>
+    
+     
+      <Link to="/">
+       <p class="centrado letrawhite  titulo fondoRosa redondeado interlineadoGrande  menu letra posicionarriba">
+          <strong>SO TRENDD</strong>
+        </p>
+      </Link>
+ 
   );
 };
 

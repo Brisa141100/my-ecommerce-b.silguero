@@ -1,0 +1,25 @@
+.Navigation {
+  display: inline;
+    background: #000000b5;
+    min-height: 5vh;
+    margin-top: 15%;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .Link {
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  

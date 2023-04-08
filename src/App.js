@@ -1,53 +1,31 @@
-import React, { Component } from "react";
 import "./App.css";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+// REACT ROUTER DOM
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // COMPONENTS
 import Header from "./components/Header/Header";
-import NavBar from "./components/NavBar/navbar";
-import CardUser from "./components/CardUser/CardUser";
-import Button from "./components/Button/Button";
+import Nav from "./components/Nav/Nav";
 
+// PAGES
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import UserDetail from "./pages/ProductDetail/ProductDetail";
 
-class App extends Component {
-  render() {
-    return (
+const App = () => {
+  return (
+    <Router>
       <div className="App">
-        <NavBar />
-        <Header
-          title="Soy el titulo a partir de una prop"
-          subTitle="Soy un subtitulo a partir de una prop"
-        />
-        <div className="UserSection">
-          <CardUser
-            name="Daniel Di Salvo"
-            date="Se unio en Enero 2021"
-            description="Front-end Developer y profesor del Curso de React.js en CoderHouse"
-            img="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-            backgroundColor="yellow"
-          />
-          <CardUser
-            name="Raul Gutierrez"
-            date="Se unió en Abril 2021"
-            description="Scrum Master y UX Designer en Mercado Libre"
-            img="https://react.semantic-ui.com/images/avatar/large/elliot.jpg"
-          />
-          <CardUser
-            name="Francesca Bertotti"
-            date="Se unió en Julio 2021"
-            description="DevOps y profesora del curso de React.js en CoderHouse"
-            img="https://react.semantic-ui.com/images/avatar/large/daniel.jpg"
-            backgroundColor="green"
-          />
-          <CardUser img="https://react.semantic-ui.com/images/avatar/large/daniel.jpg">
-            <AccountCircleIcon />
-          </CardUser>
-        </div>
-        <Button>Press Me!</Button>
-        <Button>Press Me!</Button>
+        <Header />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/user-detail/:id" element={<UserDetail />} />
+        
+        </Routes>
       </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
 export default App;

@@ -1,0 +1,76 @@
+.Header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 35vh;
+	width: 100%;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(90deg,
+			rgba(2, 0, 36, 1) 0%,
+			rgba(9, 121, 10, 1) 0%,
+			rgba(1, 13, 1, 1) 100%,
+			rgba(0, 0, 0, 1) 100%);
+	color: white;
+}
+
+.fondoRosa {
+	background-color: rgba(0, 0, 0, 0.37);
+	z-index: 2;
+	align-content: center;
+	width: 100% !important;
+	height: 4%;
+}
+
+.redondeado {
+	border-radius: 10px;
+}
+
+.menu {
+	margin-left: 0;
+	width: 100% !important;
+	height: 25%;
+	padding-top: 15%;
+	position: fixed;
+	width: 100%;
+	top: 25px;
+	height: 25%;
+}
+
+.letra {
+
+	color: #fafafa;
+}
+
+
+.posicionarriba {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+}
+
+
+.Header h1 {
+	font-size: 44px;
+}
+
+.centrado {
+	text-align: center;
+}
+
+.letrawhite {
+	color: aliceblue;
+}
+
+.titulo {
+
+	margin-top: 0px;
+	padding-bottom: 70px;
+	display: inline;
+	letter-spacing: 10px;
+	text-decoration: none;
+	z-index: 3;
+	height: 32%;
+	padding-top: 5%;
+	font-size: 60px;
+}
