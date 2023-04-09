@@ -1,0 +1,168 @@
+#mdepago {
+    margin-top: 100px;
+text-align: center;
+    z-index: 2 !important;
+align-content: space-around;
+}
+
+#visa {
+    width: 50px;
+    margin-left: 370px;
+    z-index: 3 !important;
+}
+
+#mastercard {
+    width: 50px;
+}
+
+#CST {
+    font-size: small;
+    margin-bottom: 0px;
+    margin-top: 50px;
+   text-align: center;
+    z-index: 2;
+    color: #fafafa;
+}
+
+
+#motivo {
+    width: 40%;
+    height: 35px;
+    display:inline;
+ 
+}
+
+
+
+.formc {
+    width: 100%;
+   position: relative;
+    background-color: rgb(255, 255, 255);
+    margin-top: 100px;
+    z-index: 1;
+    padding-bottom: 10%;
+  text-align: center;
+
+}
+
+
+.formc2 {
+    width: 100%;
+padding: 10%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1; text-align: center;
+ margin-top: 0;
+ height: 100%;
+}
+
+#input2 {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+
+#email {
+    width: 400px;
+    height: 40px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+legend {
+    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-left: 50%;
+}
+
+
+
+.accordion-button {
+    padding-left: 42%;
+    font-size: x-large;  
+ 
+}
+
+.accordion-collapse {
+    z-index: 1 !important;
+}
+
+.collapse {
+    z-index: 1 !important;
+}
+
+.accordion-item {
+    z-index: 1;
+}
+
+#flush-collapseThree {
+    z-index: 1 !important;
+}
+
+.accordion {
+    margin-top: 100px;
+    z-index: 1 !important;
+}
+
+.accordion-body {
+    width: 100%;
+    z-index: 1 !important; 
+ 
+}
+
+.accordion-button {
+    z-index: 1 !important;
+   
+}
+
+.collapsed {
+    z-index: 1 !important;
+}
+
+table {
+    border: solid 1px black;
+    margin-left: 20%;
+    width: 60%;
+    height: 350px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+tbody {
+    text-align: start;
+}
+
+th {
+    border: solid 1px black;
+}
+
+tr {
+    border: solid 1px black;
+}
+
+td {
+    border: solid 1px black;
+    padding: 20px;
+}
+
+.pdc {
+    text-align: center;
+    width: 900px;
+    margin-left: 15%;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+#fondo2 {
+    display: block !important;
+    background-color: rgb(173, 95, 137);
+    border-color: rgb(173, 95, 137);
+    margin-top: 50px;
+    text-align: center !important;
+}
+.divdomic {display: inline-flex; margin-bottom: 5%;} 
+.footer { margin-top: 20%; position: absolute; z-index: 1; width: 100%;}
+
