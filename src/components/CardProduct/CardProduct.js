@@ -18,7 +18,7 @@ const CardProduct = ({ data }) => {
           <Typography gutterBottom variant="h5" component="div">
             {data.name}
           </Typography>
-        
+
           <Typography variant="body2" color="text.secondary">
             {data.precio}
           </Typography>
