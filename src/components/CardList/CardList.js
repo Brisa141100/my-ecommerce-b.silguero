@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CardList.css";
 import CardProduct from "../CardProduct/CardProduct";
-import json from "../json/data"
+
 import { Link } from "react-router-dom";
 
 
@@ -9,11 +9,9 @@ const CardList = () => {
   const [Product, setProductos] = useState([]);
 
   useEffect(() => {
-    fetch (json).then((res) =>
-      setProductos(res.data)
-    );
+    fetch ('../data.json').then((res) => res.json())
+    .then((data)=> setProductos(data))
   }, []);
-
 
     return (
       <div className="Cards-List">
