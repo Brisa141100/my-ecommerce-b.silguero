@@ -13,7 +13,7 @@ const CardProduct = ({ data }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia component="img" alt="user" src={data.img} />
+        <CardMedia className="cardimg" component="img" alt="user" src={data.img} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {data.name}

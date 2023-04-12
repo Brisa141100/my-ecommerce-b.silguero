@@ -3,17 +3,14 @@ import { useParams } from "react-router-dom";
 import CardProduct from "../../components/CardProduct/CardProduct";
 
 const ProductDetail = () => {
-  const [Product, setProduct] = useState({});
+  const [Product, setProductos] = useState({});
 
   let { id } = useParams();
 
   useEffect(() => {
-    fetch('./../../json/data.json'`${id}`).then((res) =>
-      setProduct(res.data)
-    );
+    fetch ('../data.json'`${id}`).then((res) => res.json())
+    .then((data)=> setProductos(data))
   }, [id]);
- 
-  
   return (
     <div
       style={{
