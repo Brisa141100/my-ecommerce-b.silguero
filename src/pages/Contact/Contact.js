@@ -10,7 +10,7 @@ import mercadopago from "./mercadopago@2x.png"
 const Contact = () => {
 
   return (
-    <div>
+   
     <div className="accordion accordion-flush letra2" id="accordionFlushExample">
       <div className="accordion-item">
         <h1 className="accordion-header" id="flush-headingOne">
@@ -136,12 +136,12 @@ const Contact = () => {
     </div>
     </div>
     <div id="mdepago">
-      <img id="mastercard" src={}/> 
-      <img id="mastercard" src={} alt="mastercard"/>
-      <img id="mastercard" src={} alt="mercadopago"/>
-      <img id="mastercard" src={}alt="tarjeta-naranja"/>
-      <img id="mastercard" src={} alt="banelco"/>
-      <img id="mastercard" src={} alt="rapipago"/>
+      <img id="mastercard" src={mastercard}/> 
+      <img id="mastercard" src={rapipago} alt="mastercard"/>
+      <img id="mastercard" src={visa} alt="mercadopago"/>
+      <img id="mastercard" src={banelco}alt="tarjeta-naranja"/>
+      <img id="mastercard" src={mercadopago} alt="banelco"/>
+      <img id="mastercard" src={tarjetanaranja} alt="rapipago"/>
 
 
 
@@ -149,7 +149,7 @@ const Contact = () => {
 
       <p id="CST">© Copyright SO TRENDD-2022</p>
     </div>
-    </div >
+   
 );
 };
 
