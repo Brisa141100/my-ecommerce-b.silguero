@@ -39,7 +39,7 @@ const [isLoading, setIsLoading] = useState ([true])
       {Product.map((Product) => {
         return (
           <div key={Product.id}>
-            <Link to={`/product-detail/${Product.id}`}>
+            <Link to={`/carteras-detail/${Product.id}`}>
               <CardProduct data={Product} />
             </Link>
           </div>
