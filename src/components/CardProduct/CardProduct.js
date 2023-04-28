@@ -11,7 +11,7 @@ import {
 
 const CardProduct = ({ data }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 500 }}>
       <CardActionArea>
         <CardMedia className="cardimg" component="img" alt="user" src={data.img} />
         <CardContent>

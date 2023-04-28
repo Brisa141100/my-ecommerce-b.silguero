@@ -74,3 +74,23 @@
 	padding-top: 5%;
 	font-size: 60px;
 }
+
+
+.offcanvas-body {
+	background-color: black; }
+  
+  #navbarr {
+	margin-top: 50px; }
+  
+  .nav-item {
+	height: 80px; }
+  
+  #nav-link {
+	font-size: large;
+	text-align: center;
+	font-family: "libre baskerbille italic";
+	padding-top: 20px; }
+  
+  #fondo {
+	background-color: #ad5f89;
+	border-color: #ad5f89; }

@@ -2,7 +2,7 @@ import React from "react";
 
 import ZapatosList from "../../components/ZapatosList/ZapatosList";
 
-const Home = () => {
+const Zapatos = () => {
   return (
     <div>
       <ZapatosList />
@@ -10,4 +10,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Zapatos;

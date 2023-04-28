@@ -7,11 +7,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 
+
+
 // PAGES
+import Zapatos from "./pages/Zapatos/Zapatos";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Contact from "./pages/Contact/Contact";
+import SpringSeason from "./pages/Springseason/Springseason"
+import Accesorios from "./pages/Accesorios/Accesorios"
+import Carteras from "./pages/Carteras/Carteras"
+
 const App = () => {
   return (
     <Router>
@@ -23,6 +30,10 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Zapatos" element={<Zapatos />} />
+          <Route path="/Accesorios" element={<Accesorios />} />
+          <Route path="/Springseason" element={<SpringSeason/>} />
+          <Route path="/Carteras" element={<Carteras />} />
         </Routes>
       </div>
     </Router>

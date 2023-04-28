@@ -1,0 +1,114 @@
+[
+    {
+        "id": "25",
+        "name": "Lentes de sol angel",
+        "type": "Gafas",
+        "cantidad": "1",
+        "precio": "16000",
+        "img": "./assets/lentes.de.sol.angel.jpg"
+    },
+    {
+        "id": "26",
+        "name": "Lentes de sol gigi",
+        "type": "Gafas",
+        "cantidad": "1",
+        "precio": "17400",
+        "img": "./assets/lentes.de.sol.gigi.avif"
+    },
+    {
+        "id": "27",
+        "name": "Lentes de sol britt",
+        "type": "Gafas",
+        "cantidad": "1",
+        "precio": "16500",
+        "img": "./assets/Lentes.de.sol.britt.jpg"
+    },
+    {
+        "id": "28",
+        "name": "Lentes de sol platon matte",
+        "type": "Gafas",
+        "cantidad": "1",
+        "precio": "15800",
+        "img": "./assets/lentes.de.sol.infinit.negro.mate.platon.jpg"
+    },
+    {
+        "id": "29",
+        "name": "Tarjetero de llavero blacky",
+        "type": "tarjetero",
+        "cantidad": "1",
+        "precio": "2300",
+        "img": "./assets/tarjetero.de.llavero.black.webp"
+    },
+    {
+        "id": "30",
+        "name": "Tarjetero de llavero shine",
+        "type": "tarjetero",
+        "cantidad": "1",
+        "precio": "2500",
+        "img": "./assets/tarjetero.de.llavero.shine.webp"
+    },
+    {
+        "id": "31",
+        "name": "Tarjetero de llavero rose",
+        "type": "tarjetero",
+        "cantidad": "1",
+        "precio": "2300",
+        "img": "./assets/tarjetero.de.llavero.webp"
+    },
+    {
+        "id": "32",
+        "name": "Tarjetero rose",
+        "type": "tarjetero",
+        "cantidad": "1",
+        "precio": "2300",
+        "img": "./assets/tarjetero.expandible.webp"
+    },
+    {
+        "id": "33",
+        "name": "Necesser flower",
+        "type": "Neccesser",
+        "cantidad": "1",
+        "precio": "2500",
+        "img": "./assets/necesser.3.jpg"
+    },
+    {
+        "id": "34",
+        "name": "Necesser basic black",
+        "type": "Neccesser",
+        "cantidad": "1",
+        "precio": "9500",
+        "img": "./assets/necesser.4.jpg"
+    },
+    {
+        "id": "35",
+        "name": "Billetera rose",
+        "type": "billetera",
+        "cantidad": "1",
+        "precio": "4500",
+        "img": "./assets/billetera.1.webp"
+    },
+    {
+        "id": "36",
+        "name": "Billtera V rose",
+        "type": "billetera",
+        "cantidad": "1",
+        "precio": "4500",
+        "img": "./assets/billetera.2.jpeg"
+    },
+    {
+        "id": "37",
+        "name": "Billetera V black",
+        "type": "billetera",
+        "cantidad": "1",
+        "precio": "4500",
+        "img": "./assets/billetera.3.jpg"
+    },
+    {
+        "id": "38",
+        "name": "Billetera V black shine",
+        "type": "billetera",
+        "cantidad": "1",
+        "precio": "4800",
+        "img": "./assets/billetera.4.webp"
+    }
+    ]

@@ -8,8 +8,9 @@ const ProductDetail = () => {
   let { id } = useParams();
 
   useEffect(() => {
-    fetch ('../data.json').then((res) => res.json())
+    fetch ('../data-zapatos.json').then((res) => res.json())
     .then((data)=> setProductos(data.find(producto => producto.id ===id)))
+    
   }, []);
   return (
     <div
@@ -22,7 +23,7 @@ const ProductDetail = () => {
         paddingBottom: "10%",
       }}
     >
-      <h1>Product Detail</h1>
+      <h1>Product Detail</h1> 
       <CardProduct data={Product} />
     </div>
   );
