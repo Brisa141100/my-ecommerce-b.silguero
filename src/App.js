@@ -13,7 +13,7 @@ import Nav from "./components/Nav/Nav";
 import Zapatos from "./pages/Zapatos/Zapatos";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import ZapatosDetail from "./pages/ProductDetail/ZapatosDetail";
 import Contact from "./pages/Contact/Contact";
 import SpringSeason from "./pages/Springseason/Springseason"
 import Accesorios from "./pages/Accesorios/Accesorios"
@@ -28,7 +28,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product-detail/:id" element={<ProductDetail />} />
+          <Route path="/zapatos-detail/:id" element={<ZapatosDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Zapatos" element={<Zapatos />} />
           <Route path="/Accesorios" element={<Accesorios />} />
