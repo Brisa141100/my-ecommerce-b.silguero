@@ -14,7 +14,7 @@ import Zapatos from "./pages/Zapatos/Zapatos";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import ZapatosDetail from "./pages/ProductDetail/ZapatosDetail";
-import SpringseasonDetail from "./pages/ProductDetail/SpringSeasonDetail";
+import SpringSeasonDetail from "./pages/ProductDetail/SpringSeasonDetail";
 import CarterasDetail from "./pages/ProductDetail/CarterasDetail";
 import AccesoriosDetail from "./pages/ProductDetail/AccesoriosDetail";
 import Contact from "./pages/Contact/Contact";
@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/zapatos-detail/:id" element={<ZapatosDetail />} />
-          <Route path="/springseason-detail/:id" element={<SpringseasonDetail />} />
+          <Route path="/springseason-detail/:id" element={<SpringSeasonDetail />} />
           <Route path="/accesorios-detail/:id" element={<AccesoriosDetail />} />
           <Route path="/carteras-detail/:id" element={<CarterasDetail />} />
           <Route path="/contact" element={<Contact />} />

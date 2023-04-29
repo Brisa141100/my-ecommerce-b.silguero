@@ -20,7 +20,7 @@ const CardProduct = ({ data }) => {
           </Typography>
 
           <Typography variant="body2" color="text.secondary">
-            {data.precio}
+            ${data.precio}
           </Typography>
         </CardContent>
       </CardActionArea>

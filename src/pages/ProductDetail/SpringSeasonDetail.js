@@ -3,47 +3,40 @@ import { useParams } from "react-router-dom";
 import CardProduct from "../../components/CardProduct/CardProduct";
 // FIREBASE - FIRESTORE
 import {
-  collection,
-  query,
-  getDocs,
-  where,
-  documentId,
+  getDoc,
+  doc,
 } from "firebase/firestore";
 import { db } from "../../Firebase/Firebaseconfig";
 
 
 
-const SpringseasonDetail = () => {
+const SpringSeasonDetail = () => {
   const [Product, setProductos] = useState({});
 
   let { id } = useParams();
 
   useEffect(() => {
     const getSpringseason = async () => {
-      const q = query(collection(db, "SpringSeason"), where(documentId(), "==", id));
-      const docs = [];
-      const querySnapshot = await getDocs(q);
-    
-      querySnapshot.forEach((doc) => {
 
-        docs.push({ ...doc.data(), id: doc.id });
-      });
-
-      setProductos(docs);
+      const queryRef = doc(db, "SpringSeason", id);
+      const response = await getDoc(queryRef );
+      const newItem = {
+        id: response.id,
+        ...response.data(),
+      };
+      setProductos(newItem);
     };
     getSpringseason();
   }, [id]);
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "20%", marginBottom: "20%", textAlign: "center"}}
     >
       <h1>Album Details</h1>
-      {Product.map((data) => {
-        return <CardProduct Product={data} key={data.id} />;
-      })}
+      <CardProduct data={Product} />
     </div>
   );
 };
 
-export default SpringseasonDetail;
+export default SpringSeasonDetail;
