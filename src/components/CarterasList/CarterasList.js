@@ -17,24 +17,6 @@ const CarterasList = ({
 	total,
 	setTotal,
 }) => {
-  const [Product, setProductos] = useState([]);
-const [isLoading, setIsLoading] = useState ([true])
-const onAddProduct = Product => {
-  if (allProducts.find(item => item.id === Product.id)) {
-    const Products = allProducts.map(item =>
-      item.id === Product.id
-        ? { ...item, cantidad: item.cantidad + 1 }
-        : item
-    );
-    setTotal(total + Product.precio * Product.cantidad);
-    setCountProducts(countProducts + Product.cantidad);
-    return setAllProducts([...Products]);
-  }
-
-  setTotal(total + Product.precio * Product.cantidad);
-  setCountProducts(countProducts + Product.cantidad);
-  setAllProducts([...allProducts, Product]);
-};
 
   useEffect(() => {
     const getCarteras = async () => {
@@ -50,6 +32,24 @@ const onAddProduct = Product => {
     setTimeout(() => { setIsLoading(false); }, 1000);
   }, []);
 
+  const [Product, setProductos] = useState([]);
+  const [isLoading, setIsLoading] = useState ([true])
+  const onAddProduct = Product => {
+		if (allProducts.find(item => item.id === Product.id)) {
+			const Products = allProducts.map(item =>
+				item.id === Product.id
+					? { ...item, cantidad: item.cantidad + 1 }
+					: item
+			);
+			setTotal(total + Product.precio * Product.cantidad);
+			setCountProducts(countProducts + Product.cantidad);
+			return setAllProducts([...Products]);
+		}
+
+		setTotal(total + Product.precio * Product.cantidad);
+		setCountProducts(countProducts + Product.cantidad);
+		setAllProducts([...allProducts, Product]);
+	};
   return (
   <>
 { isLoading ? (
@@ -69,8 +69,8 @@ const onAddProduct = Product => {
         </button>
           </div>
        );
-     };
-    </div>
+     })
+    }</div>
  )}
 </>
   );
