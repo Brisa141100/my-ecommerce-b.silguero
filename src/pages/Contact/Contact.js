@@ -89,12 +89,12 @@ const Contact = () => {
               Contact us
             </button>
           </h1>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body formc">
 
               <fieldset>
-                <h3 class="tittle">Formulario de contacto</h3>
+                <h3 className="tittle">Formulario de contacto</h3>
                 <div>
                   <label for="nombre">Nombre:</label>
                   <input type="text" id="input2" />
@@ -127,7 +127,7 @@ const Contact = () => {
                   <option value="OTRAS CONSULTAS">OTRAS CONSULTAS</option>
                 </select>
                 <div>
-                  <button id="fondo2" class="btn btn-success" type="submit">Enviar</button>
+                  <button id="fondo2" className="btn btn-success" type="submit">Enviar</button>
                 </div>
               </fieldset>
             </div>
@@ -135,7 +135,7 @@ const Contact = () => {
         </div>
       </div>
       <div id="mdepago">
-        <img id="mastercard" src={mastercard} />
+        <img id="mastercard" src={mastercard} alt="mastercard"/>
         <img id="mastercard" src={rapipago} alt="mastercard" />
         <img id="mastercard" src={visa} alt="mercadopago" />
         <img id="mastercard" src={banelco} alt="tarjeta-naranja" />

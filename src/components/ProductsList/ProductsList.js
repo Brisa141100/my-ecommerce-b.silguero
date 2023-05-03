@@ -9,13 +9,13 @@ import { db } from "./../../Firebase/Firebaseconfig"
 import { collection, query, getDocs } from "firebase/firestore"
 
 
-const AccesoriosList = () => {
-  const [Product, setProductos] = useState([]);
-const [isLoading, setIsLoading] = useState ([true])
+const ProductsList = () => {
+ const [Product, setProductos] = useState([]);
+  const [isLoading, setIsLoading] = useState ([true])
 
   useEffect(() => {
-    const getAccesorios = async () => {
-      const q = query(collection(db, "Accesorios"));
+    const getProducts= async () => {
+      const q = query(collection(db, "Products"));
       const docs = [];
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
@@ -23,32 +23,39 @@ const [isLoading, setIsLoading] = useState ([true])
       })
       setProductos(docs);
     }
-    getAccesorios();
+    getProducts();
     setTimeout(() => { setIsLoading(false); }, 1000);
   }, []);
 
+ 
+
   return (
   <>
-{isLoading ? (
+{ isLoading ? (
  
   <div className="Spinner">
   <Spinner/>
   </div>
-) : (
-    <div className="Cards-List">
-      {Product.map((Product) => {
+) : ( 
+    <div className="Cards-List"  key={Product.categoria}>
+   
+      {Product.map ((Product) => {
         return (
           <div key={Product.id}>
-            <Link to={`/accesorios-detail/${Product.id}`}>
+            <Link to={`detalle/${Product.id}`} >
               <CardProduct data={Product} />
-            </Link>
+              </Link>   
+       <button> Añadir al carrito 
+        </button>
+        
           </div>
-        );
-      })}
+       );
+     })
+    }
     </div>
  )}
 </>
   );
 };
 
-export default AccesoriosList;
+export default ProductsList;

@@ -31,14 +31,14 @@ const Home = () => {
         </button>
         <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
           data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
       </div>
 
-      <div id="contentt" class="content">
-        <div class="gridc">
-          <figure class="effect-lily">
+      <div id="contentt" className="content">
+        <div className="gridc">
+          <figure className="effect-lily">
             <img src={ss1} alt="" />
             <figcaption>
               <h2>SUMMER SEASON <span>Comming soon</span></h2>

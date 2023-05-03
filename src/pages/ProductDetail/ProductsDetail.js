@@ -10,15 +10,15 @@ import { db } from "../../Firebase/Firebaseconfig";
 
 
 
-const CarterasDetail = () => {
+const ProductsDetail = () => {
   const [Product, setProductos] = useState({});
 
   let { id } = useParams();
 
   useEffect(() => {
-    const getCarteras = async () => {
+    const getAccesorios = async () => {
 
-      const queryRef = doc(db, "Carteras", id);
+      const queryRef = doc(db, "Products", id);
       const response = await getDoc(queryRef );
       const newItem = {
         id: response.id,
@@ -26,7 +26,7 @@ const CarterasDetail = () => {
       };
       setProductos(newItem);
     };
-    getCarteras();
+    getAccesorios();
   }, [id]);
 
   return (
@@ -39,4 +39,4 @@ const CarterasDetail = () => {
   );
 };
 
-export default CarterasDetail;
+export default ProductsDetail;
