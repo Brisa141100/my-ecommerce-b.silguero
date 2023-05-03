@@ -9,7 +9,9 @@ import {
 
 
 
-const CardProduct = ({ data }) => {
+const CardProduct = ({ data}) => {
+
+  
   return (
     <Card sx={{ maxWidth: 500 }}>
       <CardActionArea>
@@ -22,6 +24,7 @@ const CardProduct = ({ data }) => {
           <Typography variant="body2" color="text.secondary">
             ${data.precio}
           </Typography>
+         
         </CardContent>
       </CardActionArea>
     </Card>

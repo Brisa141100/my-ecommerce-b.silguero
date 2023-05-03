@@ -9,9 +9,32 @@ import { db } from "./../../Firebase/Firebaseconfig"
 import { collection, query, getDocs } from "firebase/firestore"
 
 
-const CarterasList = () => {
+const CarterasList = ({
+  allProducts,
+  setAllProducts,
+	countProducts,
+	setCountProducts,
+	total,
+	setTotal,
+}) => {
   const [Product, setProductos] = useState([]);
 const [isLoading, setIsLoading] = useState ([true])
+const onAddProduct = Product => {
+  if (allProducts.find(item => item.id === Product.id)) {
+    const Products = allProducts.map(item =>
+      item.id === Product.id
+        ? { ...item, cantidad: item.cantidad + 1 }
+        : item
+    );
+    setTotal(total + Product.precio * Product.cantidad);
+    setCountProducts(countProducts + Product.cantidad);
+    return setAllProducts([...Products]);
+  }
+
+  setTotal(total + Product.precio * Product.cantidad);
+  setCountProducts(countProducts + Product.cantidad);
+  setAllProducts([...allProducts, Product]);
+};
 
   useEffect(() => {
     const getCarteras = async () => {
@@ -29,22 +52,24 @@ const [isLoading, setIsLoading] = useState ([true])
 
   return (
   <>
-{isLoading ? (
+{ isLoading ? (
  
   <div className="Spinner">
   <Spinner/>
   </div>
 ) : (
     <div className="Cards-List">
-      {Product.map((Product) => {
+      {Product.map ((Product) => {
         return (
           <div key={Product.id}>
-            <Link to={`/carteras-detail/${Product.id}`}>
+            <Link to={`/carteras-detail/${Product.id}`} >
               <CardProduct data={Product} />
-            </Link>
+              </Link>   
+       <button onClick={() => onAddProduct(Product)}> Añadir al carrito 
+        </button>
           </div>
-        );
-      })}
+       );
+     };
     </div>
  )}
 </>
