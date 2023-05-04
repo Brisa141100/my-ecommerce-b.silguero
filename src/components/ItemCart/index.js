@@ -7,7 +7,7 @@ export const ItemCart = ({ item }) => {
   const { editItemToCart } = useContext(CartContext);
 
   /* Desestructuramos el item para sacar solo la id */
-  const { amount } = item;
+  const { cantidad} = item;
 
   return (
     <div className={styles.cartItem}>
@@ -16,17 +16,17 @@ export const ItemCart = ({ item }) => {
         <div className={styles.left}>
           <p>{item.name}</p>
           <div className={styles.buttons}>
-            <button onClick={() => editItemToCart(item._id, "add", amount)}>
+            <button onClick={() => editItemToCart(item._id, "add", cantidad)}>
               AGREGAR
             </button>
-            <button onClick={() => editItemToCart(item._id, "del", amount)}>
+            <button onClick={() => editItemToCart(item._id, "del", cantidad)}>
               SACAR
             </button>
           </div>
         </div>
         <div className={styles.right}>
-          <div>{item.amount}</div>
-          <p>Total: ${item.amount * item.price}</p>
+          <div>{item.cantidad}</div>
+          <p>Total: ${item.cantidad * item.precio}</p>
         </div>
       </div>
     </div>

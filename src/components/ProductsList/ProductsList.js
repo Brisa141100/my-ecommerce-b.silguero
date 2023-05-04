@@ -15,7 +15,7 @@ const ProductsList = (id, precio) => {
  const [Product, setProductos] = useState([]);
   const [isLoading, setIsLoading] = useState ([true])
   let { categoria} = useParams();
-  const { addItemToCart} = useContext(CartContext);
+  const { AddItemToCart} = useContext(CartContext);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -61,7 +61,7 @@ const ProductsList = (id, precio) => {
               <CardProduct data={Product} />
               </Link>   
               {!Product.inCart ? (
-              <button onClick={() => addItemToCart(Product)}>
+              <button onClick={() => AddItemToCart(Product)}>
                 Add to Cart
               </button>
             ) : (
