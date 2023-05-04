@@ -1,23 +1,13 @@
 import "./styles.css";
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "./../../contexts/ShoppingCartContext";
+import Cart from "./../Cart/index"
 
 const Nav = () => {
 
-  const [cart, setCart] = useContext(CartContext);
 
-  const quantity = cart.reduce((acc, curr) => {
-    return acc + curr.quantity;
-  }, 0);
 
-  const navStyles = {
-    color: "#fff",
-    listStyle: "none",
-    textDecoration: "none",
-  };
-
-  return (
+  return ( <div>
     <nav className="Navigation">
       <ul className="List-ul">
         <Link className="Link" to="/">
@@ -30,14 +20,8 @@ const Nav = () => {
           Contact
         </Link>
       </ul>
-      <div className="nav-list">
-        <Link to={"/cart"} style={navStyles}>
-          <li>
-            Cart items: <span className="cart-count">{quantity}</span>
-          </li>
-        </Link>
-      </div>
-    </nav>
+ 
+    </nav> <div><Cart/></div> </div>
   );
 };
 
