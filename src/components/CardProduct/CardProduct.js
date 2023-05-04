@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   Card,
   CardContent,
@@ -6,10 +5,11 @@ import {
   Typography,
   CardActionArea,
 } from "@mui/material";
-
-
+import React from "react";
 
 const CardProduct = ({ data}) => {
+
+
 
   
   return (
@@ -20,16 +20,13 @@ const CardProduct = ({ data}) => {
           <Typography gutterBottom variant="h5" component="div">
             {data.name}
           </Typography>
-
           <Typography variant="body2" color="text.secondary">
             ${data.precio}
-          </Typography>
-         
-        </CardContent>
+          </Typography> </CardContent>
+
       </CardActionArea>
     </Card>
   );
 };
 
 export default CardProduct;
-
