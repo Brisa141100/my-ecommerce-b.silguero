@@ -4,10 +4,10 @@ import styles from "./styles.module.scss";
 
 export const ItemCart = ({ item }) => {
   /* Traemos del context las funciones para agregar y sacar productos del carrito */
-  const { editItemToCart } = useContext(CartContext);
+  const { DeleteItemToCart, AddItemToCart } = useContext(CartContext);
 
   /* Desestructuramos el item para sacar solo la id */
-  const { cantidad} = item;
+  const { id } = item;
 
   return (
     <div className={styles.cartItem}>
@@ -16,12 +16,8 @@ export const ItemCart = ({ item }) => {
         <div className={styles.left}>
           <p>{item.name}</p>
           <div className={styles.buttons}>
-            <button onClick={() => editItemToCart(item._id, "add", cantidad)}>
-              AGREGAR
-            </button>
-            <button onClick={() => editItemToCart(item._id, "del", cantidad)}>
-              SACAR
-            </button>
+            <button onClick={() => AddItemToCart(item)}>+</button>
+            <button onClick={() => DeleteItemToCart(id)}>-</button>
           </div>
         </div>
         <div className={styles.right}>
