@@ -1,6 +1,8 @@
-import { createContext, useEffect, useState } from "react";
-
+import Swal from "sweetalert2"
+import { createContext, useEffect, useState, Link } from "react";
 const CartContext = createContext();
+
+
 
 export const CartProvider = ({ children }) => {
 
@@ -63,14 +65,27 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+ const ContinuarCompra = () => {if (cartItems.length === 0) {
+  Swal.fire({
+    title: "¡Tu carrito está vacio!",
+    text: "Agrega algo para continuar con la compra",
+    icon: "error",
+    confirmButtonText: "Aceptar",
+  });
+} else { return (
+  <Link to="/categoria/springseason" ></Link>)
+}}
+
+
+
   return (
   
     <CartContext.Provider
-      value={{ cartItems, AddItemToCart, DeleteItemToCart }}
-    >
+      value={{ cartItems, AddItemToCart, DeleteItemToCart, ContinuarCompra}}>
       {children}
     </CartContext.Provider>
   );
+
 };
 
 export default CartContext;

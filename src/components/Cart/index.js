@@ -8,7 +8,7 @@ const Cart = () => {
     const [cartOpen, setCartOpen] = useState(false);
     const [productsLength, setProductsLength] = useState(0);
 
-    const { cartItems } = useContext(CartContext);
+    const { cartItems, ContinuarCompra } = useContext(CartContext);
 
     useEffect(() => {
         setProductsLength(
@@ -85,7 +85,7 @@ const Cart = () => {
                       )}
             
                       <h2 className={styles.total}>Total: ${total}</h2>
-                      <button className={styles.buttonContinuar}>Continuar</button>
+                      <button className={styles.buttonContinuar}  onClick={() => ContinuarCompra ()}>Continuar</button>
                     </div>
                   )}
                 </div>
