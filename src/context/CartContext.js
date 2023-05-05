@@ -1,5 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2"
-import { createContext, useEffect, useState, Link } from "react";
+import { createContext, useEffect, useState} from "react";
 const CartContext = createContext();
 
 
@@ -65,6 +66,8 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const navegar = useNavigate()
+
  const ContinuarCompra = () => {if (cartItems.length === 0) {
   Swal.fire({
     title: "¡Tu carrito está vacio!",
@@ -72,8 +75,8 @@ export const CartProvider = ({ children }) => {
     icon: "error",
     confirmButtonText: "Aceptar",
   });
-} else { return (
-  <Link to="/categoria/springseason" ></Link>)
+} else { 
+ navegar ("/Compra")
 }}
 
 
