@@ -1,8 +1,76 @@
 import React from "react";
 import "./compra.css";
+import Swal from "sweetalert2";
+
 
 const Compra = () => {
-
+    function procesarPedido() {
+        carrito.forEach((producto) => {
+          const listaCompra = document.querySelector("#lista-compra tbody");
+          const {id, name, precio, img, cantidad} = producto;
+          if (listaCompra) {
+            const row = document.createElement("tr");
+            row.innerHTML += `
+                    <td>
+                    <img class="img-fluid img-carrito" src="${img}"/>
+                    </td>
+                    <td>${name}</td>
+                  <td>${precio}</td>
+                  <td>${cantidad}</td>
+                  <td>$${precio * cantidad}</td>
+                  `;
+            listaCompra.appendChild(row);
+          }
+        });
+    
+        totalProceso.innerText = carrito.reduce(
+          (acc, prod) => acc + prod.cantidad * prod.precio,
+          0
+        );
+      }
+      document.addEventListener('DOMContentLoaded', () =>{  document.querySelector ('#activarFuncion').click(procesarPedido)})
+                                                                                                
+    
+      function enviarCompra(e){
+        e.preventDefault()
+        const cliente = document.querySelector('#persona').value
+        const email = document.querySelector('#correo').value
+     
+        if(email === '' || cliente == ''){
+          Swal.fire({
+            title: "¡Debes completar tus datos!",
+            text: "Rellena el formulario",
+            icon: "error",
+            confirmButtonText: "Aceptar",
+        })
+      } else {
+     
+        const btn = document.getElementById('button');
+       
+        btn.value = 'Enviando correo...';
+     
+         
+        const spinner = document.querySelector('#spinner')
+        spinner.classList.add('d-flex')
+        spinner.classList.remove('d-none')
+     
+        setTimeout(() => {
+          spinner.classList.remove('d-flex')
+          spinner.classList.add('d-none')
+          formulario.reset()
+    btn.classList.add ('d-none')
+        },3000)
+    setTimeout (() => {Swal.fire({
+      title: "Compra realizada con exito",
+      text: "Te enviamos un mail con los datos de seguimiento de envio",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    })},5000)
+      }
+      localStorage.clear()
+      
+    }
+    
 return (
 <div>
 <button id="activarFuncion" className="btn btn-secondary boton mt-2 d-none">¡Click!</button>
