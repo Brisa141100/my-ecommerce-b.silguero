@@ -1,13 +1,17 @@
-import React from "react";
+import React, {useContext } from "react";
 import "./compra.css";
 import Swal from "sweetalert2";
+import CartContext from "../../context/CartContext";
 
 
 const Compra = () => {
+    const {cartItems} = useContext(CartContext);
+const totalProceso = "";
+const formulario = document.querySelector('#procesar-pago')
     function procesarPedido() {
-        carrito.forEach((producto) => {
+        cartItems.forEach((Products) => {
           const listaCompra = document.querySelector("#lista-compra tbody");
-          const {id, name, precio, img, cantidad} = producto;
+          const {id, name, precio, img, cantidad} = Products;
           if (listaCompra) {
             const row = document.createElement("tr");
             row.innerHTML += `
@@ -23,7 +27,7 @@ const Compra = () => {
           }
         });
     
-        totalProceso.innerText = carrito.reduce(
+        totalProceso.innerText = cartItems.reduce(
           (acc, prod) => acc + prod.cantidad * prod.precio,
           0
         );
@@ -36,7 +40,7 @@ const Compra = () => {
         const cliente = document.querySelector('#persona').value
         const email = document.querySelector('#correo').value
      
-        if(email === '' || cliente == ''){
+        if(email === '' || cliente === ''){
           Swal.fire({
             title: "¡Debes completar tus datos!",
             text: "Rellena el formulario",
