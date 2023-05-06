@@ -7,11 +7,13 @@ import CartContext from "../../context/CartContext";
 const Compra = () => {
     const {cartItems} = useContext(CartContext);
 const totalProceso = "";
-const formulario = document.querySelector('#procesar-pago')
+const formulario = document.querySelector('#procesar-pago');
+const activarFuncion = document.querySelector("#activarFuncion");
+
     function procesarPedido() {
         cartItems.forEach((Products) => {
           const listaCompra = document.querySelector("#lista-compra tbody");
-          const {id, name, precio, img, cantidad} = Products;
+          const { name, precio, img, cantidad} = Products;
           if (listaCompra) {
             const row = document.createElement("tr");
             row.innerHTML += `
@@ -75,6 +77,13 @@ const formulario = document.querySelector('#procesar-pago')
       
     }
     
+if (activarFuncion) {
+    activarFuncion.addEventListener("click", procesarPedido);
+  }
+  if(formulario){
+    formulario.addEventListener('submit', enviarCompra)
+  }
+  
 return (
 <div>
 <button id="activarFuncion" className="btn btn-secondary boton mt-2 d-none">¡Click!</button>
