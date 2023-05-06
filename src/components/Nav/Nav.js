@@ -7,7 +7,9 @@ const Nav = () => {
 
 
 
-  return ( <div>
+  return ( 
+    
+    <div>
     <nav className="Navigation">
       <ul className="List-ul">
         <Link className="Link" to="/">
@@ -20,8 +22,8 @@ const Nav = () => {
           Contact
         </Link>
       </ul>
- 
-    </nav> <div><Cart/></div> </div>
+      <div><Cart/></div>
+    </nav>  </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./compra.css"
-// Firebase
+
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../Firebase/Firebaseconfig";
 
@@ -18,28 +18,27 @@ const styles = {
 };
 
 const initialState = {
-  name: "",
-  lastName: "",
-  city: "",
+  nombre: "",
+  apellido: "",
+  ciudad: "",
 };
 
 const Compra = () => {
   const [values, setValues] = useState(initialState);
-  // Este estado está destinado a guardar el id de la compra
   const [purchaseID, setPurchaseID] = useState("");
 
   const onChange = (e) => {
-    const { value, name } = e.target;
-    setValues({ ...values, [name]: value });
+    const { value, nombre } = e.target;
+    setValues({ ...values, [nombre]: value });
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    // Add a new document with a generated id.
+  
     const docRef = await addDoc(collection(db, "purchases"), {
       values,
     });
-    // console.log("Document written with ID: ", docRef.id);
+
     setPurchaseID(docRef.id);
     setValues(initialState);
   };
@@ -49,28 +48,28 @@ const Compra = () => {
       <h2>Finalizar compra</h2>
       <form className="FormContainer" onSubmit={onSubmit}>
         <TextField
-          placeholder="Name"
+          placeholder="Nombre"
           style={{ margin: 10, width: 400 }}
-          name="name"
-          value={values.name}
+          name="nombre"
+          value={values.nombre}
           onChange={onChange}
         />
         <TextField
-          placeholder="Last Name"
+          placeholder="Apellido"
           style={{ margin: 10, width: 400 }}
-          name="lastName"
-          value={values.lastName}
+          name="apellido"
+          value={values.apellido}
           onChange={onChange}
         />
         <TextField
-          placeholder="City"
+          placeholder="Ciudad"
           style={{ margin: 10, width: 400 }}
-          name="city"
-          value={values.city}
+          name="ciudad"
+          value={values.ciudad}
           onChange={onChange}
         />
         <button className="btnASendAction" type="submit">
-          Send
+          Enviar
         </button>
       </form>
       {purchaseID.length ? <MessageSuccess purchaseID={purchaseID} /> : null}
