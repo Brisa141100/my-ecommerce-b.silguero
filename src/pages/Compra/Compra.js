@@ -1,14 +1,20 @@
+import React from "react";
+import useContext from "react";
+import CartContext from "./../../context/CartContext";
+
 import React, {useContext } from "react";
+
 import "./compra.css";
 import Swal from "sweetalert2";
 import CartContext from "../../context/CartContext";
 
-
 const Compra = () => {
-    const {cartItems} = useContext(CartContext);
+
 const totalProceso = "";
 const formulario = document.querySelector('#procesar-pago');
 const activarFuncion = document.querySelector("#activarFuncion");
+const {cartItems} = useContext(CartContext);
+
 
     function procesarPedido() {
         cartItems.forEach((Products) => {
@@ -191,6 +197,6 @@ return (
 
 </div>
 );
-};
+}
 
 export default Compra;
