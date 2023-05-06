@@ -355,3 +355,39 @@ a{
 .boton{
     opacity:0;
 }
+.FormContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+  margin-bottom: 20%;
+}
+
+.Textfield {
+	width: 400px;
+}
+
+.btnASendAction {
+	background: rgb(139, 12, 76);
+	background: radial-gradient(
+		circle,
+		rgb(143, 25, 80) 77%,
+		rgba(172, 34, 34, 1) 100%
+	);
+	color: white;
+	height: 54px;
+	width: 400px;
+	border-radius: 8px;
+	font-size: 18px;
+	transition: background, color 0.5s;
+	outline: #4c00ff;
+	border: none;
+	margin: 10px;
+}
+
+.btnASendAction:hover {
+	color: rgb(0, 26, 255);
+	background: rgb(0, 0, 0);
+	background: radial-gradient(circle, rgb(11, 4, 4) 77%, rgb(0, 0, 0) 100%);
+}
