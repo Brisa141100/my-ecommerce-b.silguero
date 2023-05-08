@@ -61,7 +61,7 @@ const ProductsList = (id, precio) => {
               <CardProduct data={Product} />
               </Link>   
               {!Product.inCart ? (
-              <button onClick={() => AddItemToCart(Product)}>
+              <button onClick={() => AddItemToCart(Product)} className= "btnASendAction">
                 Agregar al carrito
               </button>
             ) : (

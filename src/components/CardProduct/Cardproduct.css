@@ -6,16 +6,13 @@
     cursor: pointer;
   }
   
-  /******** Items List ******/
-  
   .items-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
-  
-  /****** Item  box *********/
+
   .item-box {
     background-color: #fff;
     margin: 10px;
@@ -68,8 +65,6 @@
     cursor: pointer;
   }
   
-  /****** Shopping Cart ********/
-  
   .cart-container {
     display: flex;
     justify-content: center;
@@ -81,3 +76,4 @@
     border-radius: 20px;
     padding: 8px;
   }
+

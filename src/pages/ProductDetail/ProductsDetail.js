@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CardProduct from "../../components/CardProduct/CardProduct";
-// FIREBASE - FIRESTORE
+
 import {
   getDoc,
   doc,
@@ -33,7 +33,7 @@ const ProductsDetail = () => {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "20%", marginBottom: "20%", textAlign: "center"}}
     >
-      <h1>Album Details</h1>
+      <h1>Product Details</h1>
       <CardProduct data={Product} />
     </div>
   );

@@ -5,8 +5,6 @@ import Cart from "./../Cart/index"
 
 const Nav = () => {
 
-
-
   return ( 
     
     <div>

@@ -1,5 +1,4 @@
-import * as React from "react";
-import Swal from "sweetalert2"
+import Swal from "sweetalert2";
 
 
 const MessageSuccess = ({ purchaseID }) => {
